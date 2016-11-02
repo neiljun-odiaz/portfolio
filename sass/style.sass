@@ -59,16 +59,47 @@ body
 
     .Body__content
         background: url(../images/paper-bg2.png) no-repeat top left, url(../images/paper-bg-bot.png) no-repeat bottom right
+        background-color: $light-gray
         margin-bottom: 40px
         margin-top: 10px
         padding: 0
+        position: relative
+        overflow: hidden
+
+    .Body__progressbg
+        background: $primary
+        position: fixed
+        top: 30px
+        width: 188px
+        height: 246px
+        margin-left: 95px
+
+    .Body__leftside
+        background: $light-gray
+        position: absolute
+        top: 10px
+        width: 55px
+        height: 98%
+
+    .Body__rightside
+        background: $light-gray
+        position: absolute
+        top: 10px
+        width: 55px
+        height: 98%
+        right: 0
+        left: auto
 
     .Body__section
-        padding: 15px 18px
+        padding: 15px 20px
+        .timeline-margin
+            padding: 0px 15px
 
     .Top
         text-align: right
         padding-bottom: 0
+        padding-top: 15px
+
         &__buttons
             background: #031634
             color: $white
@@ -102,7 +133,8 @@ body
                     width: 100px
 
     .Aboutme
-        margin: 5px auto 0px
+        padding-top: 20px
+        margin: 0px auto
         &__photo
             width: 200px
             height: 200px
@@ -119,7 +151,9 @@ body
                 margin: auto
                 -webkit-filter: blur(2px)
                 -moz-filter: blur(2px)
-                transition: all linear .3s
+                -webkit-transition: all 0.3s linear
+                -moz-transition: all 0.3s linear
+                transition: all 0.3s linear
                 &:hover
                     -webkit-filter: blur(0px)
                     -moz-filter: blur(0px)
@@ -132,7 +166,6 @@ body
             margin-bottom: 5px
             .highlight
                 font-family: $source-sans-bold
-                font-size: 700
         &__headline2
             text-align: center
             font-size: 1.5em
@@ -147,6 +180,7 @@ body
     .Profile
         &__value
             margin-top: 8px
+            margin-bottom: 0
 
     .Skills
         &__type
@@ -212,7 +246,7 @@ body
             text-align: center
             p
                 margin: 0
-                font-size: 1.2em
+                font-size: 1.1em
                 line-height: 1.1
         &__more
             background: $primary
@@ -224,20 +258,24 @@ body
             text-decoration: none
             &:hover
                 background: darken($primary, 5%)
-                transition: all ease-in-out .3s
+                -webkit-transition: all 0.3s ease-in-out
+                -moz-transition: all 0.3s ease-in-out
+                transition: all 0.3s ease-in-out
 
     .Contact
         &__description
             font-size: 16px
 
     .Footer
-        margin: 10 auto 40px
+        padding: 20px 70px
+        display: block
         p
             line-height: 1.2
-
         &__credit
             text-align: center
+            padding: 20px 0 11px
         &__thanks
+            margin: 0
             font-size: 3em
             font-family: $source-sans-bold
 
@@ -245,12 +283,58 @@ body
 // ********* Media Queryies ************** //
 @media (min-width:992px)
     .content-wrapper
+        .Body__content
+            background-color: #e6e6e6
         .Body__section
             position: relative
-            padding: 15px 70px
+            padding: 0px 70px
+            .timeline-margin 
+                display: flex
+                padding: 0px 0px
+                .timeline-image
+                    display: inline-block
+                    height: auto
+                    flex: 1
+                    width: 17%
+                    vertical-align: top
+                    &.headline
+                        background: rgba(255,255,255,0) url(../images/progress-section-title3.png) no-repeat -32px -139px
+                        background-size: 300px 375px
+                    &.point
+                        background: rgba(255,255,255,0) url(../images/progress-point.png) no-repeat -32px -145px
+                        background-size: 300px 375px
+                    &.skill
+                        background: rgba(255,255,255,0) url(../images/progress-education4.png) no-repeat -32px -145px
+                        background-size: 300px 375px
+                    &.work
+                        background: rgba(255,255,255,0) url(../images/progress-work4.png) repeat-y -42px -255px
+                        background-size: 320px 600px
+                    &.email
+                        background: rgba(255,255,255,0) url(../images/progress-mail3.png) no-repeat -32px -145px
+                        background-size: 300px 375px
+                    &.end
+                        background: rgba(255,255,255,0) url(../images/progress-end-point.png) no-repeat -32px -140px
+                        background-size: 300px 375px
+                .timeline-desc
+                    padding-top: 15px
+                    padding-bottom: 5px
+                    display: inline-block
+                    height: 100%
+                    width: 81.5%
+                    flex: 4
+                    vertical-align: top
+                    background: $light-gray
+                &::after
+                    clear: both
+            &.Top
+                padding-top: 18px
+                padding-bottom: 60px
+                background-color: $light-gray
 
         .Aboutme
             text-align: left
+            background: rgba(255,255,255,0) url(../images/progress-section-title3.png) no-repeat 14px -75px
+            background-size: 318px 375px
             &__headline
                 text-align: left
                 font-size: 4em
@@ -258,5 +342,41 @@ body
             &__headline2
                 text-align: left
             &__photo
+                margin-top: 0
                 &_img
                     padding: 6px
+            &__info
+                background-color: $light-gray
+                padding-bottom: 40px
+                padding-left: 40px
+
+        .Project
+            &__item
+                position: relative
+                margin-bottom: 10px
+                cursor: pointer
+                &:hover
+                    .Project__description
+                        opacity: 1
+            &__description
+                position: absolute
+                opacity: 0
+                width: 96%
+                height: 100%
+                top: 0
+                background: rgba(50, 57, 68, 0.85)
+                color: $white
+                padding: 15px
+                -webkit-transition: all 0.5s ease-in-out
+                -moz-transition: all 0.5s ease-in-out
+                transition: all 0.5s ease-in-out
+                p
+                    font-size: 1.2em
+            &__name
+                margin-top: 0
+
+        .Footer
+            padding: 40px 70px
+            background-color: $light-gray
+            &__credit
+                padding: 40px 0 11px
