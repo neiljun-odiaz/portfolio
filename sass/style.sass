@@ -149,14 +149,10 @@ body
                 border-radius: 50%
                 padding: 4px
                 margin: auto
-                -webkit-filter: blur(2px)
-                -moz-filter: blur(2px)
                 -webkit-transition: all 0.3s linear
                 -moz-transition: all 0.3s linear
                 transition: all 0.3s linear
-                &:hover
-                    -webkit-filter: blur(0px)
-                    -moz-filter: blur(0px)
+
         &__headline
             text-align: center
             font-size: 2.2em
@@ -256,6 +252,7 @@ body
             border-radius: 3px
             outline: none
             text-decoration: none
+            display: inline-block
             &:hover
                 background: darken($primary, 5%)
                 -webkit-transition: all 0.3s ease-in-out
@@ -267,7 +264,7 @@ body
             font-size: 16px
 
     .Footer
-        padding: 20px 70px
+        padding: 20px 30px
         display: block
         p
             line-height: 1.2
@@ -278,7 +275,17 @@ body
             margin: 0
             font-size: 3em
             font-family: $source-sans-bold
-
+        &__quote
+            margin: 20px 0 40px
+            h2
+                margin: 0
+                line-height: 1
+                font-size: 2.2em
+                font-style: italic
+            p
+                margin: 10px 0 0 0
+                font-size: 1.2em
+                line-height: 1
 
 // ********* Media Queryies ************** //
 @media (min-width:992px)
@@ -344,7 +351,12 @@ body
             &__photo
                 margin-top: 0
                 &_img
+                    -webkit-filter: blur(2px)
+                    -moz-filter: blur(2px)
                     padding: 6px
+                    &:hover
+                        -webkit-filter: blur(0px)
+                        -moz-filter: blur(0px)
             &__info
                 background-color: $light-gray
                 padding-bottom: 40px
@@ -374,6 +386,8 @@ body
                     font-size: 1.2em
             &__name
                 margin-top: 0
+            &__more
+                margin-top: 20px
 
         .Footer
             padding: 40px 70px
