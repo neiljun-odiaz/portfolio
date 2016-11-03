@@ -10,22 +10,30 @@
 </head>
 <body>
 
+    <div class="full_screen_bg"></div>
+
 	<div class="content-wrapper" id="portfolio">
 		
+        <div class="toggle_menu">
+            <a href="" class="btn"><i class="fa fa-bars"></i> Menu</a>
+        </div>
+
 		<div class="Header">
-			<div class="Header-nav wrap">
-				<ul class="Header-nav-list">
-					<li class="Header-nav-item"><a href="#" class="Header-nav-link">About Me</a></li>
-					<li class="Header-nav-item"><a href="#" class="Header-nav-link">Skills</a></li>
-					<li class="Header-nav-item"><a href="#" class="Header-nav-link">Projects</a></li>
-					<li class="Header-nav-item"><a href="#" class="Header-nav-link">Contact</a></li>
+            <a href="#" class="close_btn"><i class="fa fa-close"></i></a>
+			<div class="Header__nav wrap">
+                <div class="Header__name">Neil <strong>Odiaz</strong></div>
+				<ul class="Header__navlist">
+					<li class="Header__navitem"><a href="#" class="Header__navlink">About Me</a></li>
+					<li class="Header__navitem"><a href="#" class="Header__navlink">Skills</a></li>
+					<li class="Header__navitem"><a href="#" class="Header__navlink">Projects</a></li>
+					<li class="Header__navitem"><a href="#" class="Header__navlink">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="Body">
 
-			<div class="Body__content col-md-10 col-sm-8 col-xs-12 col-md-offset-2 col-sm-offset-2">
+			<div class="Body__content col-md-12 col-sm-10 col-xs-11">
 
 				<div class="Body__progressbg hidden-sm hidden-xs">&nbsp;</div>
 				<div class="Body__leftside hidden-sm hidden-xs">&nbsp;</div>
@@ -60,7 +68,7 @@
 									<img class="Aboutme__photo_img" src="./images/photo2.jpg">
 								</div>
 							</div>
-							<div class="col-md-9 Aboutme__info">
+							<div class="col-md-8 Aboutme__info">
 								<div class="col-md-offset-0">
 									<h1 class="Aboutme__headline">Hi, I'm <span class="highlight">Neil Odiaz.</span></h1>
 									<h2 class="Aboutme__headline2">Web Developer</h2>
@@ -343,11 +351,13 @@
 
 			</div>
 
+            <div class="clearfix"></div>
+
 		</div>
 
 	</div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/vue.js"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
 </body>

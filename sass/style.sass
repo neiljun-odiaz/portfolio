@@ -4,10 +4,14 @@
 
 @import "partials/variables"
 
+html
+    height: 100%
+
 body
     background: $black
     padding: 10px
     font-family: $source-sans-lt
+    height: 100%
 
 .highlight
     color: $primary
@@ -34,12 +38,38 @@ body
     background: transparent url(../images/timeline-bg.png) repeat-y center center
     // background-size: 400px 9px
 
+.full_screen_bg
+    // background:  url(../images/string-555070_1280.jpg) repeat center center
+    background-size: cover
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+
 .content-wrapper
     max-width: 1170px
-    margin: auto
+    margin: 40px auto 0
 
-    .Header
-        display: none
+    .toggle_menu
+        position: absolute
+        left: 0px
+        .btn
+            color: $white
+            font-size: 1.3em
+            background: rgba(0, 0, 0, 0.35)
+            border-radius: 0
+            padding: 0.5em 1em
+            font-family: $source-sans-bold
+            &:hover
+                background: rgba(0, 0, 0, 0.55)
+            .fa
+                margin-right: 3px
+
+    .Body
+        display: block
+        margin: auto
+        max-width: 960px
 
     .Body__top-colors
         display: flex
@@ -65,11 +95,14 @@ body
         padding: 0
         position: relative
         overflow: hidden
+        -webkit-transition: all 0.4s ease-in-out
+        -moz-transition: all 0.4s ease-in-out
+        transition: all 0.4s ease-in-out
 
     .Body__progressbg
         background: $primary
         position: fixed
-        top: 30px
+        top: 70px
         width: 188px
         height: 246px
         margin-left: 95px
@@ -290,8 +323,52 @@ body
 // ********* Media Queryies ************** //
 @media (min-width:992px)
     .content-wrapper
+        .Header
+            position: fixed
+            width: 210px
+            left: -215px
+            top: 0px
+            height: 100%
+            background: rgba(0, 0, 0, 0.7)
+            color: $white
+            padding: 40px 20px
+            -webkit-transition: all 0.3s ease-in-out
+            -moz-transition: all 0.3s ease-in-out
+            transition: all 0.3s ease-in-out
+            .close_btn
+                color: #e6e6e6
+                top: 20px
+                position: absolute
+                right: 20px
+                font-size: 1.4em
+                font-weight: normal
+            &__nav
+                position: relative
+            &__name
+                border: 2px solid #e6e6e6
+                padding: 5px
+                color: #e6e6e6
+                display: block
+                margin: 50px 0 10px
+                font-size: 1.5em
+                font-family: $source-sans
+                text-align: center
+                text-transform: uppercase
+            &__navitem
+                padding: 10px 0
+                text-transform: uppercase
+                border-bottom: 1px dotted #a7a7a7
+            &__navlink
+                color: $white
+                font-size: 1.2em
+                text-decoration: none
+            &.active
+                left: 0
+
         .Body__content
             background-color: #e6e6e6
+            &.moveleft
+                margin-left: 30px
         .Body__section
             position: relative
             padding: 0px 70px
@@ -325,6 +402,7 @@ body
                 .timeline-desc
                     padding-top: 15px
                     padding-bottom: 5px
+                    padding-right: 18px
                     display: inline-block
                     height: 100%
                     width: 81.5%
@@ -361,6 +439,8 @@ body
                 background-color: $light-gray
                 padding-bottom: 40px
                 padding-left: 40px
+                width: 73%
+                margin-left: 17px
 
         .Project
             &__item
