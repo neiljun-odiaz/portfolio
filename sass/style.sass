@@ -180,6 +180,8 @@ body
         text-align: right
         padding-bottom: 0
         padding-top: 15px
+        .bg
+            display: none
 
         &__buttons
             background: #031634
@@ -353,6 +355,8 @@ body
     .Footer
         padding: 20px 30px
         display: block
+        background: transparent
+
         p
             line-height: 1.2
         &__credit
@@ -390,6 +394,7 @@ body
     height: 100%
     background: rgba(0, 0, 0, 0.35)
     display: none
+    z-index: 10
     .Modal
         background: #FFF
         box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.5)
@@ -505,6 +510,16 @@ body
             &.Top
                 padding: 18px 20px 60px
                 background-color: $light-gray
+                position: relative
+                .bg
+                    display: block
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 301px
+                    height: 255px
+                    background: transparent url(../images/paper-bg2.png) no-repeat top left
+                    z-index: 2
 
         .Aboutme
             text-align: left
@@ -518,6 +533,8 @@ body
                 text-align: left
             &__photo
                 margin-top: 0
+                z-index: 2
+                position: relative
                 &_img
                     -webkit-filter: blur(2px)
                     -moz-filter: blur(2px)
@@ -568,7 +585,7 @@ body
 
         .Footer
             padding: 40px 70px
-            background-color: $light-gray
+            background: $light-gray url(../images/paper-bg-bot.png) no-repeat bottom right
             &__credit
                 padding: 40px 0 11px
 
