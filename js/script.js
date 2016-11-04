@@ -22,40 +22,31 @@ jQuery('document').ready(function(){
 
     // function get timeline progress by scroll top
     function timeline_progress() {
-        var scroll = $(document).scrollTop();
+        var scroll = $(window).scrollTop();
         var bg_top = parseFloat($('.Body__progressbg').css('top'));
         var bg_height = parseFloat($('.Body__progressbg').css('height'));
 
         if ( lastScrollTop == 0 && scroll > 60 ) {
-            console.log(scroll);
             bg_top = 0;
             new_top = 0;
         }
 
         // Check if scrolled down or up
-        if ( lastScrollTop < scroll ) { // Scroll down
-            if ( scroll > 60 ) {
-                if ( bg_top > 0 )
-                    new_top = parseFloat(bg_top) - parseFloat(5);
+        if ( scroll > 60 ) {
+            if ( bg_top > 0 ) 
+                new_top = parseFloat(scroll) - parseFloat(60);
 
-                if ( bg_height < 328 )
-                    new_height = parseFloat(bg_height) + parseFloat(1.2);
-            }
-        } else { // Scroll up
-            if ( scroll < 70  && bg_top < 70 )
-                new_top = parseFloat(bg_top) + parseFloat(15);
-
-            if ( scroll < 184 )
-                new_height = parseFloat(bg_height) - parseFloat(1.3);
-
-            console.log(bg_top);
+            new_height = parseFloat(328);
+        } else {
+            new_height = parseFloat(bg_height) - parseFloat(6);
+            if ( bg_top < 0 && scroll > 5 ) 
+                new_top = parseFloat(scroll) - parseFloat(2);
         }
 
         $('.Body__progressbg').css('top',new_top+'px');
         $('.Body__progressbg').css('height',new_height+'px');
         lastScrollTop = scroll;
     }
-
 
     // Show menu
     $('.toggle_menu .btn').on('click', function(e){
@@ -80,10 +71,54 @@ jQuery('document').ready(function(){
         e.preventDefault();
         var this_ = $(this);
         var target = $( '#' + this_.data('section') );
-        console.log(target);
         $('html, body').animate({
             scrollTop: target.offset().top
         }, 500);
     });
+
+    // Show modal to view project's more details
+    $('.Project__showmodal').on('click', function(e){
+        e.preventDefault();
+        var this_ = $(this);
+        var content = this_.find('.modal_content').html();
+        show_project_modal(content);
+    });
+
+    $('.Project__image').on('click', function(e){
+        e.preventDefault();
+        var this_ = $(this);
+        var content = this_.next('.Project__description').find('.modal_content').html();
+        show_project_modal(content);
+    });
+
+    // Close the modal
+    $('.Modal .close-btn, .bg-overlay').on('click', function(e){
+        e.preventDefault();
+        hide_project_modal();
+    });
+
+    function show_project_modal(content){
+        var offset = $(window).scrollTop();
+        var viewportHeight = $(window).height();
+        var viewportWidth = $(window).width();
+        var top = (offset  + (viewportHeight/2)) - 230;
+        var doc_height = $(document).outerHeight();
+        $('.bg-overlay').find('.Modal__content').html(content);
+        $('.bg-overlay').find('.Modal').css('top', top).show();
+        $('.bg-overlay').css('height',doc_height+'px').fadeIn('fast');
+        if ( viewportWidth < 680 ) {
+            var modal_width = $('.bg-overlay').find('.Modal').outerWidth();
+            top = (offset  + (viewportHeight/2)) - 250;
+            $('.bg-overlay').find('.Modal').css('top', top);
+            $('.bg-overlay').find('.Modal').css('marginLeft', '-' + (modal_width/2) + 'px');
+        }
+    }
+
+    function hide_project_modal() {
+        $('.bg-overlay').fadeOut('fast');
+        setTimeOut(function(){
+            $('.bg-overlay').find('.Modal__content').html('');
+        }, 500);
+    }
 
 });

@@ -39,7 +39,7 @@ body
     // background-size: 400px 9px
 
 .full_screen_bg
-    // background:  url(../images/string-555070_1280.jpg) repeat center center
+    background:  url(../images/background2.jpg) repeat center center
     background-size: cover
     position: fixed
     top: 0
@@ -148,7 +148,7 @@ body
 
     .Body__progressbg
         background: $primary
-        position: fixed
+        position: absolute
         top: 60px
         width: 188px
         height: 228px
@@ -321,10 +321,14 @@ body
         &__description
             margin: auto
             text-align: center
+            display: none
+            .modal_content
+                display: none
             p
                 margin: 0
                 font-size: 1.1em
                 line-height: 1.1
+                display: none
         &__more
             background: $primary
             color: #FFF
@@ -343,6 +347,8 @@ body
     .Contact
         &__description
             font-size: 16px
+            .link
+                color: $primary
 
     .Footer
         padding: 20px 30px
@@ -352,6 +358,14 @@ body
         &__credit
             text-align: center
             padding: 20px 0 11px
+            .socials
+                display: block
+                text-align: center
+                .link
+                    color: $black
+                    font-size: 1.7em
+                    display: inline-block
+                    margin: 2px 3px 0
         &__thanks
             margin: 0
             font-size: 3em
@@ -367,6 +381,70 @@ body
                 margin: 10px 0 0 0
                 font-size: 1.2em
                 line-height: 1
+
+.bg-overlay
+    position: absolute
+    top: 0px
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.35)
+    display: none
+    .Modal
+        background: #FFF
+        box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.5)
+        max-width: 750px
+        width: 90%
+        position: absolute
+        left: 50%
+        top: 9%
+        margin-left: -375px
+        padding: 30px 20px
+        text-align: center
+        border-radius: 3px
+        z-index: 50
+        .close-btn 
+            position: absolute
+            top: 3px
+            right: 10px
+            cursor: pointer
+            font-size: 1.5em
+        &__content
+            text-align: left
+        .modal_content
+            position: relative
+            text-align: left
+        .project_title
+            margin: 10px 0 0
+            font-size: 1.6em
+            font-family: $source-sans-bold
+            color: $primary
+            text-decoration: underline
+            line-height: 1.5
+        .project_desc
+            font-size: 1.1em
+            padding: 0px
+            margin: 10px 0
+        .project_company,
+        .project_link
+            font-size: 1.1em
+            margin: 3px 0
+        h3 
+            font-size: 3em
+            margin: 18px auto 15px
+            font-family: $source-sans
+            line-height: 1
+        p 
+            font-size: 1.67em
+            padding: 0px
+            line-height: 1.2
+            margin-top: 20px
+        img
+            width: 100%
+            float: left
+            max-width: 400px
+            border: 1px solid #949494
+        
 
 // ********* Media Queryies ************** //
 @media (min-width:992px)
@@ -449,7 +527,7 @@ body
                         -moz-filter: blur(0px)
             &__info
                 background-color: $light-gray
-                padding-bottom: 40px
+                padding-bottom: 30px
                 padding-left: 40px
                 width: 73%
                 margin-left: 17px
@@ -468,16 +546,23 @@ body
                 width: 96%
                 height: 100%
                 top: 0
-                background: rgba(50, 57, 68, 0.85)
+                display: block
+                background: rgba(50, 57, 68, 0.9)
                 color: $white
                 padding: 15px
+                display: flex
+                justify-content: center
+                text-align: center
+                flex-direction: column
                 -webkit-transition: all 0.5s ease-in-out
                 -moz-transition: all 0.5s ease-in-out
                 transition: all 0.5s ease-in-out
                 p
-                    font-size: 1.2em
+                    font-size: 2em
+                    display: block
             &__name
-                margin-top: 0
+                margin-top: 2px
+                font-size: 1.5em
             &__more
                 margin-top: 20px
 
@@ -486,3 +571,14 @@ body
             background-color: $light-gray
             &__credit
                 padding: 40px 0 11px
+
+    .bg-overlay
+        .Modal
+            .project_title
+                margin: 0
+            .project_desc
+                padding: 0px 10px
+            p
+                padding: 0 19px
+            img
+                margin-right: 18px
