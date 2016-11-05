@@ -30,7 +30,8 @@ var Works = Vue.extend({
 
     data: function() {
         return {
-            myworks: []
+            myworks: [],
+            showmore: false
         }
     },
 
@@ -44,6 +45,13 @@ var Works = Vue.extend({
                 var works = response.body;
                 this.myworks = works;
             });
+        },
+
+        showMoreWorks() {
+            this.myworks.forEach(function(project) {
+                project.hidden = false;
+            });
+            this.showmore = true;
         }
     }
 });
@@ -166,7 +174,7 @@ jQuery('document').ready(function(){
 
     function hide_project_modal() {
         $('.bg-overlay').fadeOut('fast');
-        setTimeOut(function(){
+        setTimeout(function(){
             $('.bg-overlay').find('.Modal__content').html('');
         }, 500);
     }

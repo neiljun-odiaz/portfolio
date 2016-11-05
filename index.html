@@ -192,8 +192,8 @@
                                 <p>-John Johnson</p>
                             </div>
                             <div class="socials">
-                                <a href="#" class="link"><i class="fa fa-github"></i></a>
-                                <a href="#" class="link"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://github.com/neiljun-odiaz" target="_blank" class="link"><i class="fa fa-github"></i></a>
+                                <a href="https://ph.linkedin.com/in/neiljunodiaz" target="_blank" class="link"><i class="fa fa-linkedin"></i></a>
                             </div>
 							<p>Copyright &copy; 2016 &nbsp; | &nbsp; Neiljun I. Odiaz</p>
 						</div>
@@ -240,7 +240,7 @@
     <template id="latest-works">
         <div>
             <div class="Project__list">
-                <div class="Project__item d-1of3 t-1of3" v-for="work in myworks">
+                <div class="Project__item d-1of3 t-1of3" v-for="(work, index) in myworks" :class="{ hidden: work.hidden }">
                     <img class="Project__image" :src="'./images/' + work.thumbnail">
                     <div class="Project__description Project__showmodal">
                         <p><i class="fa fa-eye"></i></p>
@@ -251,11 +251,12 @@
                             <p class="project_desc">{{ work.description }}</p>
                             <p class="project_company">Employer: <a :href="work.employer_url" target="_blank">{{ work.employer }}</a></p>
                             <p class="project_link">URL: <a :href="work.url" target="_blank">Visit site</a></p>
+                            <p class="project_technology">Technology: {{ work.technology }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <a href="#" class="Project__more">View More</a>
+                <a href="#" class="Project__more" :class="{ hidden : showmore }" @click.prevent="showMoreWorks()">View More</a>
             </div>
         </div>
     </template>
