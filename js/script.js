@@ -1,13 +1,63 @@
-// const Child = require('./components/skill.vue')
+var Skills = Vue.extend({
+    template: '#core-skills',
 
-// Vue.component('child', Child)
+    props: ['skillsets'],
 
-// new Vue ({
-// 	el: '#portfolio',
-// 	data: {
-// 		myname: 'Neiljun I. Odiaz'
-// 	}
-// })
+    data: function() {
+        return {
+            myskillsets: []
+        }
+    },
+
+    created() {
+        this.fetchTasks();
+    },
+
+    methods: {
+        fetchTasks() {
+            this.$http.get('api/skillset.json').then((response) => {
+                var skillsets = response.body;
+                this.myskillsets = skillsets;
+            });
+        }
+    }
+});
+
+var Works = Vue.extend({
+    template: '#latest-works',
+
+    props: ['works'],
+
+    data: function() {
+        return {
+            myworks: []
+        }
+    },
+
+    created() {
+        this.fetchTasks();
+    },
+
+    methods: {
+        fetchTasks() {
+            this.$http.get('api/projects.json').then((response) => {
+                var works = response.body;
+                this.myworks = works;
+            });
+        }
+    }
+});
+
+Vue.component('coreskills', Skills);
+Vue.component('latestworks', Works);
+
+new Vue ({
+	el: '#portfolio',
+	data: {
+        myskillsets: [],
+        myworks:[]
+	}
+});
 
 jQuery('document').ready(function(){
     var lastScrollTop = 0;
@@ -77,14 +127,14 @@ jQuery('document').ready(function(){
     });
 
     // Show modal to view project's more details
-    $('.Project__showmodal').on('click', function(e){
+    $('.Project').on('click','.Project__showmodal', function(e){
         e.preventDefault();
         var this_ = $(this);
         var content = this_.find('.modal_content').html();
         show_project_modal(content);
     });
 
-    $('.Project__image').on('click', function(e){
+    $('.Project').on('click','.Project__image', function(e){
         e.preventDefault();
         var this_ = $(this);
         var content = this_.next('.Project__description').find('.modal_content').html();

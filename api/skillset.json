@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Front-end",
+    "skills": {
+      "HTML": { "progress":"90" },
+      "CSS": { "progress":"85" },
+      "Javascript": { "progress":"60" },
+      "SASS": { "progress":"85" }
+    }
+  },
+  
+  {
+    "name": "Back-end",
+    "skills": {
+      "PHP": { "progress":"80" },
+      "NodeJS": { "progress":"50" },
+      "Laravel": { "progress":"60" },
+      "ExpressJS": { "progress":"50" }
+    }
+  },
+
+  {
+    "name": "Database Management",
+    "skills": {
+      "MySQL": { "progress":"90" },
+      "PostgreSQL": { "progress":"80" },
+      "MongoDB": { "progress":"50" }
+    }
+  }
+]
