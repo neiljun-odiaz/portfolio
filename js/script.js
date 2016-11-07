@@ -159,7 +159,7 @@ jQuery('document').ready(function(){
         var offset = $(window).scrollTop();
         var viewportHeight = $(window).height();
         var viewportWidth = $(window).width();
-        var top = (offset  + (viewportHeight/2)) - 230;
+        var top = (offset  + (viewportHeight/2)) - 280;
         var doc_height = $(document).outerHeight();
         $('.bg-overlay').find('.Modal__content').html(content);
         $('.bg-overlay').find('.Modal').css('top', top).show();

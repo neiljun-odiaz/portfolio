@@ -58,7 +58,7 @@
 							<i class="fa fa-download"></i>
 							<span class="text">Download Resume</span>
 						</a>
-						<a href="#" class="Top__buttons email">
+						<a href="mailto:neiljun.odiaz@gmail.com" class="Top__buttons email">
 							<i class="fa fa-envelope-o"></i>
 							<span class="text">Send Me Message</span>
 						</a>
@@ -148,9 +148,10 @@
 							<div class="timeline-margin">
 								<div class="timeline-image work">&nbsp;</div>
 								<div class="timeline-desc">
-									<h3 class="section-subtitle">Latest Works</h3>
+									<h3 class="section-subtitle">Recent Works</h3>
 									
-                                    <latestworks :works="myworks"></latestworks>
+                                    <h4>I can't yet display my works here, but stay tune ;)</h4>
+                                    <!-- <latestworks :works="myworks"></latestworks> -->
 
 								</div>
 							</div>
@@ -173,7 +174,7 @@
 									<h3 class="section-subtitle">Get in touch</h3>
 									<div class="Contact__description">
 										<p>Got a project you would like me to work on? Or maybe have something interesting to share? Cool!</p>
-										<p>Email me at <a href="mailto:hello@neiljunodiaz.com" class="link">[hello@neiljunodiaz.com]</a>, then we'll grab a cup of coffee. Who knows we're gonna be best buds :)</p>
+										<p>Email me at <a href="mailto:neiljun.odiaz@gmail.com" class="link">[neiljun.odiaz@gmail.com]</a>, then we'll grab a cup of coffee. Who knows we're gonna be best buds :)</p>
 										<p>You can also download my CV <a href="./downloadable/OdiazNeiljunResume.pdf" target="_blank" class="link">[here]</a>.</p>
 									</div>
 								</div>
@@ -214,6 +215,9 @@
 
     <div class="bg-overlay">
         <div class="Modal">
+            <div class="Modal__header">
+                <h2>Project Details</h2>
+            </div>
             <div class="close-btn"><i class="fa fa-close"></i></div>
             <div class="Modal__content"></div>
         </div>
@@ -256,6 +260,7 @@
                             <p class="project_company">Employer: <a :href="work.employer_url" target="_blank">{{ work.employer }}</a></p>
                             <p class="project_link">URL: <a :href="work.url" target="_blank">Visit site</a></p>
                             <p class="project_technology">Technology: {{ work.technology }}</p>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
