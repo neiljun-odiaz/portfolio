@@ -17,7 +17,7 @@
     <div class="full_screen_bg"></div>
 
 	<div class="content-wrapper" id="portfolio">
-		
+
         <div class="toggle_menu">
             <a href="" class="btn"><i class="fa fa-bars"></i> Menu</a>
         </div>
@@ -32,6 +32,8 @@
 					<li class="Header__navitem"><a href="#" data-section="projects" class="Header__navlink">Projects</a></li>
 					<li class="Header__navitem"><a href="#" data-section="contact" class="Header__navlink">Contact</a></li>
 				</ul>
+                <a href="./downloadable/OdiazNeiljunResume.pdf" target="_blank" class="Header__btnlink"><i class="fa fa-download"></i> Download Resume</a>
+                <a href="mailto:neiljun.odiaz@gmail.com" target="_blank" class="Header__btnlink"><i class="fa fa-envelope-o"></i> Send me message</a>
 			</div>
 		</div>
 
@@ -149,9 +151,9 @@
 								<div class="timeline-image work">&nbsp;</div>
 								<div class="timeline-desc">
 									<h3 class="section-subtitle">Recent Works</h3>
-									
-                                    <h4>I can't yet display my works here, but stay tune ;)</h4>
-                                    <!-- <latestworks :works="myworks"></latestworks> -->
+
+                                    <!-- <h4>I can't yet display my works here, but stay tune ;)</h4> -->
+                                    <latestworks :works="myworks"></latestworks>
 
 								</div>
 							</div>
@@ -213,14 +215,13 @@
 
 	</div>
 
-    <div class="bg-overlay">
-        <div class="Modal">
-            <div class="Modal__header">
-                <h2>Project Details</h2>
-            </div>
-            <div class="close-btn"><i class="fa fa-close"></i></div>
-            <div class="Modal__content"></div>
+    <div class="bg-overlay"></div>
+    <div class="Modal">
+        <div class="Modal__header">
+            <h2>Project Details</h2>
         </div>
+        <div class="close-btn"><i class="fa fa-close"></i></div>
+        <div class="Modal__content"></div>
     </div>
 
     <template id="core-skills">
@@ -249,12 +250,12 @@
         <div>
             <div class="Project__list">
                 <div class="Project__item d-1of3 t-1of3" v-for="(work, index) in myworks" :class="{ hidden: work.hidden }">
-                    <img class="Project__image" :src="'./images/' + work.thumbnail">
+                    <img class="Project__image" :src="'./images/projects/' + work.thumbnail">
                     <div class="Project__description Project__showmodal">
                         <p><i class="fa fa-eye"></i></p>
                         <h3 class="Project__name">{{ work.name }}</h3>
                         <div class="modal_content">
-                            <img class="project_image" :src="'./images/' + work.thumbnail">
+                            <img class="project_image" :src="'./images/projects/styled/' + work.thumbnail">
                             <h1 class="project_title">{{ work.name }}</h1>
                             <p class="project_desc">{{ work.description }}</p>
                             <p class="project_company">Employer: <a :href="work.employer_url" target="_blank">{{ work.employer }}</a></p>

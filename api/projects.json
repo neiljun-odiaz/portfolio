@@ -1,88 +1,88 @@
 [
   {
-    "name": "DriveTime - Local Attack",
-    "thumbnail": "drivetime1.jpg",
-    "description": "Yandex for building interactive cross platform web applications. ad asdas adpaipdapaojdajd",
-    "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
-    "hidden": false
-  },
-
-  {
     "name": "DriveTime - Advice Center",
-    "thumbnail": "drivetime1.jpg",
-    "description": "Pure Function is a function. Browserify is an optimization used with the problem within the number of this for other projects like SpiderMonkey, is a dependency manager for JavaScript. Ember is by a clean underlying data. ",
+    "thumbnail": "drivetime3.jpg",
+    "description": "A website intended for DriveTime customers which provide advices and tips about business and finances. This is built using the Bones theme with a custom permalink rewrite rules. A non-responsive site.",
     "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://drivelatest.fbdev.net/",
+    "technology": "WordPress - PHP, HTML5, SASS, jQuery, MySQL",
     "hidden": false
   },
 
   {
-    "name": "DriveTime - Local Attack",
+    "name": "Digma",
+    "thumbnail": "digma.jpg",
+    "description": "A collection of articles and events about Arts and Artitechture. Schools and organizations can submit their events using a custom form and there's also a donation page which is integrated using PayPal API. I worked mostly on the client side, while my partner on the server side.",
+    "employer": "RedLemon Digital Media",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://www.digma.us/",
+    "technology": "WordPress - PHP, HTML5, CSS3, jQuery, MySQL",
+    "hidden": false
+  },
+
+  {
+    "name": "DriveTime - Complaint Center",
+    "thumbnail": "drivetime2.jpg",
+    "description": "A complaint center which allows DriveTime customers to submit their concerns and complaints. Also have a couple of FAQ articles. This is the 2nd time to use Bones and SASS. A responsive website.",
+    "employer": "RedLemon Digital Media",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://drivecomplaint.fbdev.net/",
+    "technology": "WordPress - PHP, HTML5, SASS, jQuery, MySQL",
+    "hidden": false
+  },
+
+  {
+    "name": "Paragon Life Homes",
+    "thumbnail": "paragon.jpg",
+    "description": "This is a company website which sepcializes on corporate homebuilding. This also displays available and in-development community homes mostly on Las Vegas, Nevada area. Built mostly using a Page Builder plugin with ofcourse, a custom-styled templates.",
+    "employer": "RedLemon Digital Media",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://paragon.life/",
+    "technology": "WordPress - PHP, HTML5, CSS, jQuery, MySQL",
+    "hidden": false
+  },
+
+  {
+    "name": "Global Leadership Institute",
+    "thumbnail": "gli.jpg",
+    "description": "As the website says, this is a \"Non-Profit, Non-Governmental Organization. Serves as an International Leadership Research & Development Organization, creating programmes & strategies...\". The homepage event and details can be dynamically set from the WP dashboard.",
+    "employer": "RedLemon Digital Media",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://gliprograms.org/",
+    "technology": "WordPress - PHP, HTML5, CSS, jQuery, MySQL",
+    "hidden": false
+  },
+
+  {
+    "name": "DriveTime Dealership",
     "thumbnail": "drivetime1.jpg",
+    "description": "A single delearship website from DriveTime specifically for Mesa, Arizona branch. This shows list of cars and details based on the Make and Model, which is fetched from DriveTime's internal API. First project to use Bones theme and SASS.",
+    "employer": "RedLemon Digital Media",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://drivetime.fbdev.net/",
+    "technology": "WordPress - PHP, HTML5, SASS, jQuery, MySQL",
+    "hidden": false
+  },
+  {
+    "name": "Leyeah Packaging",
+    "thumbnail": "leyeah.jpg",
     "description": "Yandex for building interactive cross platform web applications. ad asdas adpaipdapaojdajd",
     "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
-    "hidden": false
-  },
-
-  {
-    "name": "DriveTime - Advice Center",
-    "thumbnail": "drivetime1.jpg",
-    "description": "Pure Function is a function. Browserify is an optimization used with the problem within the number of this for other projects like SpiderMonkey, is a dependency manager for JavaScript. Ember is by a clean underlying data. ",
-    "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
-    "hidden": false
-  },
-
-  {
-    "name": "DriveTime - Local Attack",
-    "thumbnail": "drivetime1.jpg",
-    "description": "Yandex for building interactive cross platform web applications. ad asdas adpaipdapaojdajd",
-    "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
-    "hidden": false
-  },
-
-  {
-    "name": "DriveTime - Advice Center",
-    "thumbnail": "drivetime1.jpg",
-    "description": "Pure Function is a function. Browserify is an optimization used with the problem within the number of this for other projects like SpiderMonkey, is a dependency manager for JavaScript. Ember is by a clean underlying data. ",
-    "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
-    "hidden": false
-  },
-  {
-    "name": "DriveTime - Local Attack",
-    "thumbnail": "drivetime1.jpg",
-    "description": "Yandex for building interactive cross platform web applications. ad asdas adpaipdapaojdajd",
-    "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://leyeah.fbdev.net/",
+    "technology": "WordPress - PHP, HTML5, CSS, jQuery, MySQL",
     "hidden": true
   },
 
   {
-    "name": "DriveTime - Advice Center",
-    "thumbnail": "drivetime1.jpg",
+    "name": "FreeBosh",
+    "thumbnail": "freebosh.jpg",
     "description": "Pure Function is a function. Browserify is an optimization used with the problem within the number of this for other projects like SpiderMonkey, is a dependency manager for JavaScript. Ember is by a clean underlying data. ",
     "employer": "RedLemon Digital Media",
-    "employer_url": "dad",
-    "url": "d",
-    "technology": "da",
+    "employer_url": "http://redlemonph.com/",
+    "url": "http://www.freebosh.com/",
+    "technology": "WordPress - PHP, HTML5, CSS, jQuery, MySQL",
     "hidden": true
   }
 ]
